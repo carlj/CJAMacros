@@ -3,7 +3,7 @@ Collection of daily used Macros in my iOS Projects
 
 ##Installation
 Just drag&drop the ```CJAMarcos.h``` and ```CJAMarcos.m``` files in your XCode Project. 
-For globael usage you can import the ```CJAMarcos.h``` in your projects ```-Prefix.pch``` file.
+For global usage you can import the ```CJAMarcos.h``` in your projects ```-Prefix.pch``` file.
 
 ##Usage
 First check out the example Project for further examples
@@ -12,7 +12,7 @@ First check out the example Project for further examples
 //Should output the current function fingerprint
 kNSLogFunction
 
-//Should output the current function fingerprint + and the given object description
+//Should output the current function fingerprint + the given object description
 kNSLogFunctionWithObject(@"My test log");
 kNSLogFunctionWithObject(self);
 
@@ -50,7 +50,7 @@ if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO( NSFoundationVersionNumber_iOS_7_0))
 }
 
 if (SYSTEM_VERSION_LESS_THAN( _iOS_7_0) ) {
-  kNSLogFunctionWithObject(@"Why are on iOS 6, 5, 4, 3 or 2");
+  kNSLogFunctionWithObject(@"We are on iOS 6, 5, 4, 3 or 2");
 }
 ```
 

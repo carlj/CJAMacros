@@ -48,6 +48,7 @@
 
 - (void)performNotificationMacros {
   
+  //Notification Shortcuts
   static NSString *testNotificationName = @"TestNotificationName";
   
   addObserver(testNotificationName, self, testNotification:, nil);
@@ -64,6 +65,7 @@
 
 - (void)performMainThreadMacro {
 
+  //Main thread shortcuts
   onMainThread(
                kNSLogFunctionWithObject(@"This should be on the Main Thread");
                notify(@"NotificationOnMainThread", nil, nil);

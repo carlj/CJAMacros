@@ -1,5 +1,6 @@
 #CJA Macros
-Collection of daily used Macros in my iOS Projects
+Collection of daily used Macros in my iOS Projects  
+  
 [![Build Status](https://travis-ci.org/carlj/CJAMacros.png?branch=master)](https://travis-ci.org/carlj/CJAMacros)
 
 ##Installation

@@ -91,6 +91,28 @@ _lambda \
 }
 
 ///---------------------------
+/// @name Device Checks
+///---------------------------
+
+/**
+ Runtime check for the current device.
+ checks if the current device is an iPhone 5 or iPod Touch 5 Gen, or an Device with 1136 Screen height
+ */
+#define DEVICE_IS_IPHONE_5 ( fabs( ( double )[ [ UIScreen mainScreen ] bounds ].size.height - ( double )568 ) < DBL_EPSILON )
+
+/**
+ Runtime check for the current device.
+ checks if the current device is an iPhone or iPod Touch
+ */
+#define DEVICE_IS_IPHONE ( UIUserInterfaceIdiomPhone == UI_USER_INTERFACE_IDIOM() )
+
+/**
+ Runtime check for the current device.
+ checks if the current device is an iPad
+ */
+#define DEVICE_IS_IPAD ( UIUserInterfaceIdiomPad == UI_USER_INTERFACE_IDIOM())
+
+///---------------------------
 /// @name Runtime Checks
 ///---------------------------
 

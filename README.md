@@ -54,6 +54,19 @@ if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO( NSFoundationVersionNumber_iOS_7_0))
 if (SYSTEM_VERSION_LESS_THAN( _iOS_7_0) ) {
   kNSLogFunctionWithObject(@"We are on iOS 6, 5, 4, 3 or 2");
 }
+
+//Device Checks
+if (DEVICE_IS_IPAD) {
+	kNSLogFunctionWithObject(@"The current device is an iPad");
+}
+
+if (DEVICE_IS_IPHONE) {
+	kNSLogFunctionWithObject(@"The current device is an iPhone (incl. iPhone 5 and iPod Touch's)");
+}
+
+if (DEVICE_IS_IPHONE_5) {
+	kNSLogFunctionWithObject(@"The current device is an iPhone 5 or iPod Touch 5 Gen.");
+}
 ```
 
 ##License

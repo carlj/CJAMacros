@@ -21,7 +21,7 @@
   [self performLocalizationMacro];
   [self performMainThreadMacro];
   [self performRuntimeChecks];
-
+  [self performDeviceChecks];
 }
 
 - (void)performLogMacros {
@@ -88,8 +88,21 @@
     kNSLogFunctionWithObject(@"Why are on iOS 6, 5, 4, 3 or 2");
   }
   
+}
 
+- (void)performDeviceChecks {
   
+  if (DEVICE_IS_IPAD) {
+    kNSLogFunctionWithObject(@"The current device is an iPad");
+  }
+
+  if (DEVICE_IS_IPHONE) {
+    kNSLogFunctionWithObject(@"The current device is an iPhone (incl. iPhone 5 and iPod Touch's)");
+  }
+  
+  if (DEVICE_IS_IPHONE_5) {
+    kNSLogFunctionWithObject(@"The current device is an iPhone 5 or iPod Touch 5 Gen.");
+  }
 }
 
 @end

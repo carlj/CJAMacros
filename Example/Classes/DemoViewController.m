@@ -32,11 +32,6 @@
   //Should output the current function fingerprint + and the given object description
   kNSLogFunctionWithObject(@"My test log");
   kNSLogFunctionWithObject(self);
-  
-  //Use the Error Log to log statements in RELEASE mode
-  ErrorLog(@"Always print this");
-
-
 }
 
 - (void)performLocalizationMacro {

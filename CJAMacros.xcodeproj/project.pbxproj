@@ -11,7 +11,6 @@
 		FADBC04017C394F4000EBDB9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FADBC03F17C394F4000EBDB9 /* Foundation.framework */; };
 		FADBC04217C394F4000EBDB9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FADBC04117C394F4000EBDB9 /* CoreGraphics.framework */; };
 		FADBC04417C394F4000EBDB9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FADBC04317C394F4000EBDB9 /* UIKit.framework */; };
-		FADBC07E17C39611000EBDB9 /* CJAMacros.m in Sources */ = {isa = PBXBuildFile; fileRef = FADBC07D17C39611000EBDB9 /* CJAMacros.m */; };
 		FADBC07F17C396BD000EBDB9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FADBC07517C39563000EBDB9 /* main.m */; };
 		FADBC08017C396CC000EBDB9 /* CJAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FADBC07117C39563000EBDB9 /* CJAAppDelegate.m */; };
 		FADBC08317C39B51000EBDB9 /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FADBC08217C39B51000EBDB9 /* DemoViewController.m */; };
@@ -30,7 +29,6 @@
 		FADBC07417C39563000EBDB9 /* CJAMacros-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CJAMacros-Prefix.pch"; sourceTree = "<group>"; };
 		FADBC07517C39563000EBDB9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FADBC07C17C39611000EBDB9 /* CJAMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CJAMacros.h; path = CJAMacros/CJAMacros.h; sourceTree = "<group>"; };
-		FADBC07D17C39611000EBDB9 /* CJAMacros.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CJAMacros.m; path = CJAMacros/CJAMacros.m; sourceTree = "<group>"; };
 		FADBC08117C39B51000EBDB9 /* DemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoViewController.h; sourceTree = "<group>"; };
 		FADBC08217C39B51000EBDB9 /* DemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoViewController.m; sourceTree = "<group>"; };
 		FADBC0C617C39F46000EBDB9 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
@@ -122,7 +120,6 @@
 			isa = PBXGroup;
 			children = (
 				FADBC07C17C39611000EBDB9 /* CJAMacros.h */,
-				FADBC07D17C39611000EBDB9 /* CJAMacros.m */,
 			);
 			name = CJAMacros;
 			sourceTree = "<group>";
@@ -156,11 +153,6 @@
 				CLASSPREFIX = CJA;
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Carl Jahn";
-				TargetAttributes = {
-					FADBC05617C394F4000EBDB9 = {
-						TestTargetID = FADBC03B17C394F4000EBDB9;
-					};
-				};
 			};
 			buildConfigurationList = FADBC03717C394F4000EBDB9 /* Build configuration list for PBXProject "CJAMacros" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -198,7 +190,6 @@
 			files = (
 				FADBC08017C396CC000EBDB9 /* CJAAppDelegate.m in Sources */,
 				FADBC07F17C396BD000EBDB9 /* main.m in Sources */,
-				FADBC07E17C39611000EBDB9 /* CJAMacros.m in Sources */,
 				FADBC08317C39B51000EBDB9 /* DemoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

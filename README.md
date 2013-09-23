@@ -4,7 +4,7 @@ Collection of daily used Macros in my iOS Projects
 [![Build Status](https://travis-ci.org/carlj/CJAMacros.png?branch=master)](https://travis-ci.org/carlj/CJAMacros)
 
 ##Installation
-Just drag&drop the ```CJAMarcos.h``` and ```CJAMarcos.m``` files in your XCode Project. 
+Just drag&drop the ```CJAMarcos.h``` files in your XCode Project. 
 For global usage you can import the ```CJAMarcos.h``` in your projects ```-Prefix.pch``` file.
 
 ##Usage

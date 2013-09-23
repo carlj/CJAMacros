@@ -18,24 +18,6 @@
 #define kNSLogFunctionWithObject(_object) NSLog(@"%s %@", __FUNCTION__, [_object description]);
 #define kNSLogFunction kNSLogFunctionWithObject(@"")
 
-/**
- Special ErrorLog. 
- You can use this function to Log in Release Mode
- @param format - The same format as you should use in NSLog(...)
- */
-void ErrorLog(NSString *format, ...); //The Error-Log also Outputs in the relase Vesion
-
-/**
- DEBUG and RELEASE settings for the Log Macros
- Note: The ErrorLog Function is always available. Normal NSLog stripped out in RELEASE mode
- */
-#ifdef DEBUG
-  #define ELog 1
-#else
-  #define ELog 1
-  #define NSLog(format, ...)
-#endif
-
 ///---------------------------
 /// @name Localization
 ///---------------------------

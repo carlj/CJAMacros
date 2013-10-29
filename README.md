@@ -67,6 +67,17 @@ if (DEVICE_IS_IPHONE) {
 if (DEVICE_IS_IPHONE_5) {
 	kNSLogFunctionWithObject(@"The current device is an iPhone 5 or iPod Touch 5 Gen.");
 }
+
+//Declare Constants
+
+//Defines a extern Constant, use it in your .h File
+DEFINE_KEY(kTestKey)
+
+//Assign a const value to the Constant, use it in your .m File
+DECLARE_KEY(kTestKey)
+
+//Assign a custom const value to the Constant, use it in your .m File
+DEFINE_KEY_WITH_VALUE(kNewTestKey, @"CustomValue")
 ```
 
 ##License

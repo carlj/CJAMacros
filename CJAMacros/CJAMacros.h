@@ -73,6 +73,15 @@ _lambda \
 }
 
 ///---------------------------
+/// @name Constant Defines
+///---------------------------
+
+#define DECLARE_KEY( key ) FOUNDATION_EXPORT NSString *const key;
+#define DEFINE_KEY( key ) NSString *const key = @ #key;
+#define DEFINE_KEY_WITH_VALUE( key, property ) NSString *const key = @ #property;
+
+
+///---------------------------
 /// @name Device Checks
 ///---------------------------
 

@@ -6,6 +6,12 @@
 //  Copyright (c) 2013 Carl Jahn. All rights reserved.
 //
 
+DEFINE_KEY(kTestKey)
+
+DECLARE_KEY(kTestKey)
+
+DEFINE_KEY_WITH_VALUE(kNewTestKey, @"CustomValue")
+
 #import "DemoViewController.h"
 
 @interface DemoViewController ()
@@ -22,6 +28,8 @@
   [self performMainThreadMacro];
   [self performRuntimeChecks];
   [self performDeviceChecks];
+  [self performKeyDeclaration];
+
 }
 
 - (void)performLogMacros {
@@ -98,6 +106,13 @@
   if (DEVICE_IS_IPHONE_5) {
     kNSLogFunctionWithObject(@"The current device is an iPhone 5 or iPod Touch 5 Gen.");
   }
+}
+
+- (void)performKeyDeclaration {
+
+  
+  kNSLogFunctionWithObject(kTestKey);
+  kNSLogFunctionWithObject(kNewTestKey);
 }
 
 @end

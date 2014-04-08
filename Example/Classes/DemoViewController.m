@@ -20,6 +20,9 @@ DEFINE_KEY_WITH_VALUE(kNewTestKey, @"CustomValue")
 
 @implementation DemoViewController
 
+CJAMacrosSingletonImplemantion
+
+
 - (void)viewDidLoad {
   [super viewDidLoad];
 

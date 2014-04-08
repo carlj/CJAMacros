@@ -174,3 +174,23 @@ _lambda \
  @_gVersion - the given Version Number. aka (_iOS_7_0 or NSFoundationVersionNumber_iOS_7_0 and so on)
  */
 #define SYSTEM_VERSION_LESS_THAN_OR_EQUAL_TO(_gVersion)     ( floor(NSFoundationVersionNumber) <= _gVersion )
+
+/**
+Add a Singelton implementation to the .m File
+*/
+#define CJAMacrosSingletonImplemantion \
++ (instancetype)sharedInstance { \
+    \
+    static dispatch_once_t onceToken; \
+    static id sharedInstance = nil; \
+    dispatch_once(&onceToken, ^{ \
+        sharedInstance = [self.class new]; \
+    }); \
+    \
+    return sharedInstance; \
+}
+
+/**
+ Add a Singelton interface declaration to the .h File
+ */
+#define CJAMacrosSingletonInterface + (instancetype)sharedInstance;

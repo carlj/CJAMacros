@@ -194,3 +194,18 @@ Add a Singelton implementation to the .m File
  Add a Singelton interface declaration to the .h File
  */
 #define CJAMacrosSingletonInterface + (instancetype)sharedInstance;
+
+/**
+ Define a weak for an object with a given name.
+ */
+#define CJAWeakWithNameAndObject(_obj, _name) __weak typeof(_obj) weak##_name = _obj
+
+/**
+ Define a weak for a given object.
+ */
+#define CJAWeak(_obj) CJAWeakWithNameAndObject(_obj, _obj)
+
+/**
+ Define a weak self.
+ */
+#define CJAWeakSelf CJAWeak(self)

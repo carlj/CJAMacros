@@ -32,7 +32,7 @@ CJAMacrosSingletonImplemantion
   [self performRuntimeChecks];
   [self performDeviceChecks];
   [self performKeyDeclaration];
-
+  [self testWeakDeclarations];
 }
 
 - (void)performLogMacros {
@@ -48,7 +48,7 @@ CJAMacrosSingletonImplemantion
 - (void)performLocalizationMacro {
 
   //Localization Shortcut
-  NSString *localString = _(@"MyTestLocalizationStrinKey");
+  NSString *localString = CJALocalize(@"MyTestLocalizationStrinKey");
   kNSLogFunctionWithObject(localString);
 }
 
@@ -116,6 +116,22 @@ CJAMacrosSingletonImplemantion
   
   kNSLogFunctionWithObject(kTestKey);
   kNSLogFunctionWithObject(kNewTestKey);
+}
+
+- (void)testWeakDeclarations {
+    // Test self weak.
+    CJAWeakSelf;
+    NSAssert([weakself isEqual:self], @"Objects should be equal");
+
+    // Test weak strings.
+    NSString *text = @"Example";
+    CJAWeak(text);
+    NSAssert([weaktext isEqual:text], @"NSString objects should be equal");
+    
+    // Test weak numbers
+    NSNumber *number = @(1);
+    CJAWeakWithNameAndObject(number, Number);
+    NSAssert([weakNumber isEqual:number], @"NSNumber objects should be equal");
 }
 
 @end

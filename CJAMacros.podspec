@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
  s.platform     = :ios, "6.0"
  s.summary      = "Macro collection for daily usage"
  s.homepage     = "https://github.com/carlj/CJAMacros"
- s.author       = { "Carl Jahn" => "jahncarl@gmail.com" }
+ s.authors      = { "Carl Jahn" => "jahncarl@gmail.com" }
  s.source       = { :git  => "https://github.com/carlj/CJAMacros.git", :tag => s.version.to_s }
  s.source_files = "CJAMacros/*.{h,m}"
  s.requires_arc = true

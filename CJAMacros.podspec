@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
  s.name         = "CJAMacros"
- s.version      = "1.3.0"
+ s.version      = "2.0.0"
  s.platform     = :ios, "6.0"
  s.summary      = ""
  s.homepage     = "https://github.com/carlj/CJAMacros"

@@ -194,3 +194,8 @@ Add a Singelton implementation to the .m File
  Add a Singelton interface declaration to the .h File
  */
 #define CJAMacrosSingletonInterface + (instancetype)sharedInstance;
+
+/**
+ Define a weak self.
+ */
+#define CJASelfWeak __weak typeof(self) selfWeak = self;

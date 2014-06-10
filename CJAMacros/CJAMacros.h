@@ -25,7 +25,7 @@
 /**
  Simple Shortcut for your NSLocalizedString(@"..", @"..")
  */
-#define _(_key) NSLocalizedString( _key , nil);
+#define CJALocalize(_key) NSLocalizedString( _key , nil);
 
 
 ///---------------------------

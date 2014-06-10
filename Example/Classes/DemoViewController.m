@@ -48,7 +48,7 @@ CJAMacrosSingletonImplemantion
 - (void)performLocalizationMacro {
 
   //Localization Shortcut
-  NSString *localString = _(@"MyTestLocalizationStrinKey");
+  NSString *localString = CJALocalize(@"MyTestLocalizationStrinKey");
   kNSLogFunctionWithObject(localString);
 }
 

@@ -78,6 +78,20 @@ DECLARE_KEY(kTestKey)
 
 //Assign a custom const value to the Constant, use it in your .m File
 DEFINE_KEY_WITH_VALUE(kNewTestKey, @"CustomValue")
+
+//Test self weak.
+CJAWeakSelf;
+NSAssert([weakself isEqual:self], @"Objects should be equal");
+
+//Test weak strings.
+NSString *text = @"Example";
+CJAWeak(text);
+NSAssert([weaktext isEqual:text], @"NSString objects should be equal");
+    
+//Test weak numbers
+NSNumber *number = @(1);
+CJAWeakWithNameAndObject(number, Number);
+NSAssert([weakNumber isEqual:number], @"NSNumber objects should be equal");
 ```
 
 ##License

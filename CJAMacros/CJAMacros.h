@@ -209,3 +209,9 @@ Add a Singelton implementation to the .m File
  Define a weak self.
  */
 #define CJAWeakSelf CJAWeak(self)
+
+/**
+ Typicall isKindOfClass Check
+ */
+#define CJAIsKindOfClass(_object, _class) [_object isKindOfClass: [_class class]]
+

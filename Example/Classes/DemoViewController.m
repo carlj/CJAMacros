@@ -32,7 +32,8 @@ CJAMacrosSingletonImplemantion
   [self performRuntimeChecks];
   [self performDeviceChecks];
   [self performKeyDeclaration];
-  [self testWeakDeclarations];
+  [self performWeakDeclarations];
+  [self perfomKindOfClassChecks];
 }
 
 - (void)performLogMacros {
@@ -118,7 +119,7 @@ CJAMacrosSingletonImplemantion
   kNSLogFunctionWithObject(kNewTestKey);
 }
 
-- (void)testWeakDeclarations {
+- (void)performWeakDeclarations {
     // Test self weak.
     CJAWeakSelf;
     NSAssert([weakself isEqual:self], @"Objects should be equal");
@@ -132,6 +133,12 @@ CJAMacrosSingletonImplemantion
     NSNumber *number = @(1);
     CJAWeakWithNameAndObject(number, Number);
     NSAssert([weakNumber isEqual:number], @"NSNumber objects should be equal");
+}
+
+- (void)perfomKindOfClassChecks {
+
+    NSAssert(CJAIsKindOfClass(self, UIViewController), @"self isnt Kind of UIViewController Subclass ");
+    NSAssert(!CJAIsKindOfClass(self, UIView), @"self shouldnt be a UIView Subclass ");
 }
 
 @end

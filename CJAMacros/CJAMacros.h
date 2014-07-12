@@ -111,32 +111,57 @@ _lambda \
 //If the symbol for iOS 5 isnt defined, define it.
 #ifndef NSFoundationVersionNumber_iOS_5_0
 #define NSFoundationVersionNumber_iOS_5_0 881.00
+#endif
+
+#ifdef NSFoundationVersionNumber_iOS_5_0
 #define _iOS_5_0 NSFoundationVersionNumber_iOS_5_0
 #endif
 
 //If the symbol for iOS 5.1 isnt defined, define it.
 #ifndef NSFoundationVersionNumber_iOS_5_1
 #define NSFoundationVersionNumber_iOS_5_1 890.10
+#endif
+
+#ifdef NSFoundationVersionNumber_iOS_5_1
 #define _iOS_5_1 NSFoundationVersionNumber_iOS_5_1
 #endif
 
 //If the symbol for iOS 6.0 isnt defined, define it.
 #ifndef NSFoundationVersionNumber_iOS_6_0
-#define NSFoundationVersionNumber_iOS_6_0 993.00
+#define NSFoundationVersionNumber_iOS_6_0 992.00
+#endif
+
+#ifdef NSFoundationVersionNumber_iOS_6_0
 #define _iOS_6_0 NSFoundationVersionNumber_iOS_6_0
 #endif
 
 //If the symbol for iOS 6.1 isnt defined, define it.
 #ifndef NSFoundationVersionNumber_iOS_6_1
-#define NSFoundationVersionNumber_iOS_6_1 993.00
+#define NSFoundationVersionNumber_iOS_6_1 992.00
+#endif
+
+#ifdef NSFoundationVersionNumber_iOS_6_1
 #define _iOS_6_1 NSFoundationVersionNumber_iOS_6_1
 #endif
 
 //If the symbol for iOS 7 isnt defined, define it.
 #ifndef NSFoundationVersionNumber_iOS_7_0
-#define NSFoundationVersionNumber_iOS_7_0 1047.00
+#define NSFoundationVersionNumber_iOS_7_0 1047.20
+#endif
+
+#ifdef NSFoundationVersionNumber_iOS_7_0
 #define _iOS_7_0 NSFoundationVersionNumber_iOS_7_0
 #endif
+
+//If the symbol for iOS 7 isnt defined, define it.
+#ifndef NSFoundationVersionNumber_iOS_7_1
+#define NSFoundationVersionNumber_iOS_7_1 1047.25
+#endif
+
+#ifdef NSFoundationVersionNumber_iOS_7_1
+#define _iOS_7_1 NSFoundationVersionNumber_iOS_7_1
+#endif
+
 
 /**
  Runtime check for the current version Nummer. 

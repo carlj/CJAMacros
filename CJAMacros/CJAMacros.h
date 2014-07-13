@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#include <Availability.h>
 
 ///---------------------------
 /// @name Logs
@@ -107,7 +108,28 @@ _lambda \
 /// @name Runtime Checks
 ///---------------------------
 
- 
+#ifndef __IPHONE_5_0
+#define __IPHONE_5_0     50000
+#endif
+#ifndef __IPHONE_5_1
+#define __IPHONE_5_1     50100
+#endif
+#ifndef __IPHONE_6_0
+#define __IPHONE_6_0     60000
+#endif
+#ifndef __IPHONE_6_1
+#define __IPHONE_6_1     60100
+#endif
+#ifndef __IPHONE_7_0
+#define __IPHONE_7_0     70000
+#endif
+#ifndef __IPHONE_7_1
+#define __IPHONE_7_1     70100
+#endif
+#ifndef __IPHONE_8_0
+#define __IPHONE_8_0     80000
+#endif
+
 //If the symbol for iOS 5 isnt defined, define it.
 #ifndef NSFoundationVersionNumber_iOS_5_0
 #define NSFoundationVersionNumber_iOS_5_0 881.00
@@ -128,7 +150,13 @@ _lambda \
 
 //If the symbol for iOS 6.0 isnt defined, define it.
 #ifndef NSFoundationVersionNumber_iOS_6_0
-#define NSFoundationVersionNumber_iOS_6_0 992.00
+
+#if __IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_8_0
+    #define NSFoundationVersionNumber_iOS_6_0 992.00
+#else
+    #define NSFoundationVersionNumber_iOS_6_0 993.00
+#endif
+
 #endif
 
 #ifdef NSFoundationVersionNumber_iOS_6_0
@@ -137,7 +165,14 @@ _lambda \
 
 //If the symbol for iOS 6.1 isnt defined, define it.
 #ifndef NSFoundationVersionNumber_iOS_6_1
-#define NSFoundationVersionNumber_iOS_6_1 992.00
+
+#if __IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_8_0
+    #define NSFoundationVersionNumber_iOS_6_1 992.00
+#else
+    #define NSFoundationVersionNumber_iOS_6_1 993.00
+#endif
+
+
 #endif
 
 #ifdef NSFoundationVersionNumber_iOS_6_1
@@ -146,7 +181,13 @@ _lambda \
 
 //If the symbol for iOS 7 isnt defined, define it.
 #ifndef NSFoundationVersionNumber_iOS_7_0
-#define NSFoundationVersionNumber_iOS_7_0 1047.20
+
+#if __IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_8_0
+    #define NSFoundationVersionNumber_iOS_7_0 1047.20
+#else
+    #define NSFoundationVersionNumber_iOS_7_0 1047.00
+#endif
+
 #endif
 
 #ifdef NSFoundationVersionNumber_iOS_7_0

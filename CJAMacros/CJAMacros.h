@@ -150,13 +150,7 @@ _lambda \
 
 //If the symbol for iOS 6.0 isnt defined, define it.
 #ifndef NSFoundationVersionNumber_iOS_6_0
-
-#if __IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_8_0
-    #define NSFoundationVersionNumber_iOS_6_0 992.00
-#else
-    #define NSFoundationVersionNumber_iOS_6_0 993.00
-#endif
-
+#define NSFoundationVersionNumber_iOS_6_0 993.00 //extracted from iOS 7 Header
 #endif
 
 #ifdef NSFoundationVersionNumber_iOS_6_0
@@ -165,14 +159,7 @@ _lambda \
 
 //If the symbol for iOS 6.1 isnt defined, define it.
 #ifndef NSFoundationVersionNumber_iOS_6_1
-
-#if __IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_8_0
-    #define NSFoundationVersionNumber_iOS_6_1 992.00
-#else
-    #define NSFoundationVersionNumber_iOS_6_1 993.00
-#endif
-
-
+#define NSFoundationVersionNumber_iOS_6_1 993.00 //extracted from iOS 7 Header
 #endif
 
 #ifdef NSFoundationVersionNumber_iOS_6_1
@@ -181,28 +168,30 @@ _lambda \
 
 //If the symbol for iOS 7 isnt defined, define it.
 #ifndef NSFoundationVersionNumber_iOS_7_0
-
-#if __IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_8_0
-    #define NSFoundationVersionNumber_iOS_7_0 1047.20
-#else
-    #define NSFoundationVersionNumber_iOS_7_0 1047.00
-#endif
-
+#define NSFoundationVersionNumber_iOS_7_0 1047.00 //extracted from iOS 7 Header
 #endif
 
 #ifdef NSFoundationVersionNumber_iOS_7_0
 #define _iOS_7_0 NSFoundationVersionNumber_iOS_7_0
 #endif
 
-//If the symbol for iOS 7 isnt defined, define it.
+//If the symbol for iOS 7.1 isnt defined, define it.
 #ifndef NSFoundationVersionNumber_iOS_7_1
-#define NSFoundationVersionNumber_iOS_7_1 1047.25
+#define NSFoundationVersionNumber_iOS_7_1 1047.25 //extracted from iOS 8 Header
 #endif
 
 #ifdef NSFoundationVersionNumber_iOS_7_1
 #define _iOS_7_1 NSFoundationVersionNumber_iOS_7_1
 #endif
 
+//If the symbol for iOS 8 isnt defined, define it.
+#ifndef NSFoundationVersionNumber_iOS_8_0
+#define NSFoundationVersionNumber_iOS_8_0 1134.10 //extracted with NSLog(@"%f", NSFoundationVersionNumber)
+#endif
+
+#ifdef NSFoundationVersionNumber_iOS_8_0
+#define _iOS_8_0 NSFoundationVersionNumber_iOS_8_0
+#endif
 
 /**
  Runtime check for the current version Nummer. 

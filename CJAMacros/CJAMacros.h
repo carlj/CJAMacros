@@ -266,6 +266,21 @@ Add a Singelton implementation to the .m File
 #define CJAWeakSelf CJAWeak(self)
 
 /**
+ Define a strong for an object with a given name.
+ */
+#define CJAStrongWithNameAndObject(_obj, _name) __strong typeof(_obj) strong##_name = _obj
+
+/**
+ Define a strong for a given object.
+ */
+#define CJAStrong(_obj) CJAStrongWithNameAndObject(_obj, _obj)
+
+/**
+ Define a strong self.
+ */
+#define CJAStrongSelf CJAStrong(self)
+
+/**
  Typicall isKindOfClass Check
  */
 #define CJAIsKindOfClass(_object, _class) [_object isKindOfClass: [_class class]]

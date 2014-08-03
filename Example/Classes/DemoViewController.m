@@ -124,15 +124,25 @@ CJAMacrosSingletonImplemantion
     CJAWeakSelf;
     NSAssert([weakself isEqual:self], @"Objects should be equal");
 
+    CJAStrongSelf;
+    NSAssert([strongself isEqual:self], @"Objects should be equal");
+    
     // Test weak strings.
     NSString *text = @"Example";
     CJAWeak(text);
     NSAssert([weaktext isEqual:text], @"NSString objects should be equal");
-    
+
+    CJAStrong(text);
+    NSAssert([strongtext isEqual:text], @"NSString objects should be equal");
+
     // Test weak numbers
     NSNumber *number = @(1);
     CJAWeakWithNameAndObject(number, Number);
     NSAssert([weakNumber isEqual:number], @"NSNumber objects should be equal");
+    
+    CJAStrongWithNameAndObject(number, Number);
+    NSAssert([strongNumber isEqual:number], @"NSNumber objects should be equal");
+    
 }
 
 - (void)perfomKindOfClassChecks {

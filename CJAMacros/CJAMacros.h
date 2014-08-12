@@ -9,15 +9,6 @@
 #import <Foundation/Foundation.h>
 #include <Availability.h>
 
-///---------------------------
-/// @name Logs
-///---------------------------
-
-/**
- Shortcuts for NSLogs(...). Also includes the current __FUNCTION__
- */
-#define kNSLogFunctionWithObject(_object) NSLog(@"%s %@", __FUNCTION__, [_object description]);
-#define kNSLogFunction kNSLogFunctionWithObject(@"")
 
 ///---------------------------
 /// @name Localization
@@ -230,6 +221,11 @@ _lambda \
  */
 #define SYSTEM_VERSION_LESS_THAN_OR_EQUAL_TO(_gVersion)     ( floor(NSFoundationVersionNumber) <= _gVersion )
 
+
+///---------------------------
+/// @name Singleton Macros
+///---------------------------
+
 /**
 Add a Singelton implementation to the .m File
 */
@@ -249,6 +245,10 @@ Add a Singelton implementation to the .m File
  Add a Singelton interface declaration to the .h File
  */
 #define CJAMacrosSingletonInterface + (instancetype)sharedInstance;
+
+///---------------------------
+/// @name Block Vars
+///---------------------------
 
 /**
  Define a weak for an object with a given name.
@@ -284,4 +284,15 @@ Add a Singelton implementation to the .m File
  Typicall isKindOfClass Check
  */
 #define CJAIsKindOfClass(_object, _class) [_object isKindOfClass: [_class class]]
+
+
+///---------------------------
+/// @name Float compare
+///---------------------------
+
+/**
+ Compare two float objects
+ */
+#define CJAFloatEqual(_first, _second) (fabsf( _first - _second ) < FLT_EPSILON)
+
 

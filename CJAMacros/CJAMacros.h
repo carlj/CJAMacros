@@ -189,21 +189,21 @@ _lambda \
  checks ( CURRENT_VERSION_NUMBR == GIVEN_VERSION_NUMBER)
  @_gVersion - the given Version Number. aka (_iOS_7_0 or NSFoundationVersionNumber_iOS_7_0 and so on) 
  */
-#define SYSTEM_VERSION_EQUAL_TO(_gVersion)                  ( floor(NSFoundationVersionNumber) == _gVersion )
+#define SYSTEM_VERSION_EQUAL_TO(_gVersion)                  ( fabsf(NSFoundationVersionNumber - _gVersion) < DBL_EPSILON )
 
 /**
  Runtime check for the current version Nummer. 
  checks CURRENT_VERSION_NUMBER > GIVEN_VERSION_NUMBER
  @_gVersion - the given Version Number. aka (_iOS_7_0 or NSFoundationVersionNumber_iOS_7_0 and so on)
  */
-#define SYSTEM_VERSION_GREATER_THAN(_gVersion)              ( floor(NSFoundationVersionNumber) >  _gVersion )
+#define SYSTEM_VERSION_GREATER_THAN(_gVersion)              ( NSFoundationVersionNumber >  _gVersion )
 
 /**
  Runtime check for the current version Nummer.
  checks CURRENT_VERSION_NUMBER >= GIVEN_VERSION_NUMBER
  @_gVersion - the given Version Number. aka (_iOS_7_0 or NSFoundationVersionNumber_iOS_7_0 and so on)
  */
-#define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(_gVersion)  ( floor(NSFoundationVersionNumber) >= _gVersion )
+#define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(_gVersion)  ( NSFoundationVersionNumber > _gVersion || SYSTEM_VERSION_EQUAL_TO(_gVersion) )
 
 
 /**
@@ -211,7 +211,7 @@ _lambda \
  checks CURRENT_VERSION_NUMBER < GIVEN_VERSION_NUMBER
  @_gVersion - the given Version Number. aka (_iOS_7_0 or NSFoundationVersionNumber_iOS_7_0 and so on)
  */
-#define SYSTEM_VERSION_LESS_THAN(_gVersion)                 ( floor(NSFoundationVersionNumber) <  _gVersion )
+#define SYSTEM_VERSION_LESS_THAN(_gVersion)                 ( NSFoundationVersionNumber <  _gVersion )
 
 
 /**
@@ -219,7 +219,7 @@ _lambda \
  checks CURRENT_VERSION_NUMBER <= GIVEN_VERSION_NUMBER
  @_gVersion - the given Version Number. aka (_iOS_7_0 or NSFoundationVersionNumber_iOS_7_0 and so on)
  */
-#define SYSTEM_VERSION_LESS_THAN_OR_EQUAL_TO(_gVersion)     ( floor(NSFoundationVersionNumber) <= _gVersion )
+#define SYSTEM_VERSION_LESS_THAN_OR_EQUAL_TO(_gVersion)     ( NSFoundationVersionNumber < _gVersion || SYSTEM_VERSION_EQUAL_TO(_gVersion)  )
 
 
 ///---------------------------

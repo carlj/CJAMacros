@@ -25,10 +25,10 @@
 ///---------------------------
 
 /**
-  Shortcut for [[NSNotificationCenter ...] postNotificationName: ...]
-  @param notificationName - The notification name you want to post
-  @param obj - The object for the notification
-  @param userInfoDictionary - The NSDictionary for the userInfo
+ Shortcut for [[NSNotificationCenter ...] postNotificationName: ...]
+ @param notificationName - The notification name you want to post
+ @param obj - The object for the notification
+ @param userInfoDictionary - The NSDictionary for the userInfo
  */
 #define notify(_notificationName, _obj, _userInfoDictionary) [[NSNotificationCenter defaultCenter] postNotificationName: _notificationName object: _obj userInfo: _userInfoDictionary];
 
@@ -185,14 +185,14 @@ _lambda \
 #endif
 
 /**
- Runtime check for the current version Nummer. 
+ Runtime check for the current version Nummer.
  checks ( CURRENT_VERSION_NUMBR == GIVEN_VERSION_NUMBER)
- @_gVersion - the given Version Number. aka (_iOS_7_0 or NSFoundationVersionNumber_iOS_7_0 and so on) 
+ @_gVersion - the given Version Number. aka (_iOS_7_0 or NSFoundationVersionNumber_iOS_7_0 and so on)
  */
 #define SYSTEM_VERSION_EQUAL_TO(_gVersion)                  ( fabsf(NSFoundationVersionNumber - _gVersion) < DBL_EPSILON )
 
 /**
- Runtime check for the current version Nummer. 
+ Runtime check for the current version Nummer.
  checks CURRENT_VERSION_NUMBER > GIVEN_VERSION_NUMBER
  @_gVersion - the given Version Number. aka (_iOS_7_0 or NSFoundationVersionNumber_iOS_7_0 and so on)
  */
@@ -227,18 +227,18 @@ _lambda \
 ///---------------------------
 
 /**
-Add a Singelton implementation to the .m File
-*/
+ Add a Singelton implementation to the .m File
+ */
 #define CJAMacrosSingletonImplemantion \
 + (instancetype)sharedInstance { \
-    \
-    static dispatch_once_t onceToken; \
-    static id sharedInstance = nil; \
-    dispatch_once(&onceToken, ^{ \
-        sharedInstance = [self.class new]; \
-    }); \
-    \
-    return sharedInstance; \
+\
+static dispatch_once_t onceToken; \
+static id sharedInstance = nil; \
+dispatch_once(&onceToken, ^{ \
+sharedInstance = [self.class new]; \
+}); \
+\
+return sharedInstance; \
 }
 
 /**
@@ -294,5 +294,4 @@ Add a Singelton implementation to the .m File
  Compare two float objects
  */
 #define CJAFloatEqual(_first, _second) (fabsf( _first - _second ) < FLT_EPSILON)
-
 

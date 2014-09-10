@@ -72,7 +72,6 @@ _lambda \
 #define DEFINE_KEY( key ) NSString *const key = @ #key;
 #define DEFINE_KEY_WITH_VALUE( key, property ) NSString *const key = @ #property;
 
-
 ///---------------------------
 /// @name Device Checks
 ///---------------------------
@@ -81,7 +80,19 @@ _lambda \
  Runtime check for the current device.
  checks if the current device is an iPhone 5 or iPod Touch 5 Gen, or an Device with 1136 Screen height
  */
-#define DEVICE_IS_IPHONE_5 ( fabs( ( double )[ [ UIScreen mainScreen ] bounds ].size.height - ( double )568 ) < DBL_EPSILON )
+#define DEVICE_IS_IPHONE_5 ( fabsf(CGRectGetWidth([UIScreen mainScreen].bounds) - 568.f) < FLT_EPSILON )
+
+/**
+ Runtime check for the current device.
+ checks if the current device is an iPhone 6
+ */
+#define DEVICE_IS_IPHONE_6 ( fabsf(CGRectGetWidth([UIScreen mainScreen].bounds) - 667.f) < FLT_EPSILON )
+
+/**
+ Runtime check for the current device.
+ checks if the current device is an iPhone 6 Plus
+ */
+#define DEVICE_IS_IPHONE_6_PLUS ( fabsf(CGRectGetWidth([UIScreen mainScreen].bounds) - 960.f) < FLT_EPSILON )
 
 /**
  Runtime check for the current device.
@@ -294,4 +305,3 @@ return sharedInstance; \
  Compare two float objects
  */
 #define CJAFloatEqual(_first, _second) (fabsf( _first - _second ) < FLT_EPSILON)
-

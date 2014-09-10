@@ -99,6 +99,14 @@ CJAMacrosSingletonImplemantion
     if (DEVICE_IS_IPHONE_5) {
         NSLog(@"The current device is an iPhone 5 or iPod Touch 5 Gen.");
     }
+    
+    if (DEVICE_IS_IPHONE_6) {
+        NSLog(@"The current device is an iPhone 6");
+    }
+    
+    if (DEVICE_IS_IPHONE_6_PLUS) {
+        NSLog(@"The current device is an iPhone 6 Plus");
+    }
 }
 
 - (void)performKeyDeclaration {

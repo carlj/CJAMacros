@@ -80,19 +80,19 @@ _lambda \
  Runtime check for the current device.
  checks if the current device is an iPhone 5 or iPod Touch 5 Gen, or an Device with 1136 Screen height
  */
-#define DEVICE_IS_IPHONE_5 ( fabsf(CGRectGetWidth([UIScreen mainScreen].bounds) - 568.f) < FLT_EPSILON )
+#define DEVICE_IS_IPHONE_5 ( fabsf(CGRectGetHeight([UIScreen mainScreen].bounds) - 568.f) < FLT_EPSILON )
 
 /**
  Runtime check for the current device.
  checks if the current device is an iPhone 6
  */
-#define DEVICE_IS_IPHONE_6 ( fabsf(CGRectGetWidth([UIScreen mainScreen].bounds) - 667.f) < FLT_EPSILON )
+#define DEVICE_IS_IPHONE_6 ( fabsf(CGRectGetHeight([UIScreen mainScreen].bounds) - 667.f) < FLT_EPSILON )
 
 /**
  Runtime check for the current device.
  checks if the current device is an iPhone 6 Plus
  */
-#define DEVICE_IS_IPHONE_6_PLUS ( fabsf(CGRectGetWidth([UIScreen mainScreen].bounds) - 960.f) < FLT_EPSILON )
+#define DEVICE_IS_IPHONE_6_PLUS ( fabsf(CGRectGetHeight([UIScreen mainScreen].bounds) - 960.f) < FLT_EPSILON )
 
 /**
  Runtime check for the current device.

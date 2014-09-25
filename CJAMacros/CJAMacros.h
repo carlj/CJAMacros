@@ -92,7 +92,7 @@ _lambda \
  Runtime check for the current device.
  checks if the current device is an iPhone 6 Plus
  */
-#define DEVICE_IS_IPHONE_6_PLUS ( fabsf(CGRectGetHeight([UIScreen mainScreen].bounds) - 960.f) < FLT_EPSILON )
+#define DEVICE_IS_IPHONE_6_PLUS ( fabsf(CGRectGetHeight([UIScreen mainScreen].bounds) - 736.f) < FLT_EPSILON )
 
 /**
  Runtime check for the current device.

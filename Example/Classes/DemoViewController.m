@@ -72,7 +72,7 @@ CJAMacrosSingletonImplemantion
 - (void)performRuntimeChecks {
     
     if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO( _iOS_7_0) ) {
-        NSLog(@"Why are on iOS 7");
+        NSLog(@"Why are on iOS 7 or greater");
     }
     
     //you can always use the normal NSFoundationVersionNumber's

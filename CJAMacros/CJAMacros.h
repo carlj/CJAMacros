@@ -202,7 +202,7 @@ _lambda \
  checks ( CURRENT_VERSION_NUMBR == GIVEN_VERSION_NUMBER)
  @_gVersion - the given Version Number. aka (_iOS_7_0 or NSFoundationVersionNumber_iOS_7_0 and so on)
  */
-#define SYSTEM_VERSION_EQUAL_TO(_gVersion)                  ( fabsf(NSFoundationVersionNumber - _gVersion) < DBL_EPSILON )
+#define SYSTEM_VERSION_EQUAL_TO(_gVersion)                  ( fabs(NSFoundationVersionNumber - _gVersion) < DBL_EPSILON )
 
 /**
  Runtime check for the current version Nummer.

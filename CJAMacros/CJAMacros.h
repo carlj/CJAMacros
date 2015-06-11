@@ -80,6 +80,12 @@ _lambda \
 
 /**
  Runtime check for the current device.
+ checks if the current device is an iPhone 4 or an Device with 480 Screen height
+ */
+#define DEVICE_IS_IPHONE_4 DEVICE_SCREEN_HAS_LENGTH([UIScreen mainScreen].bounds, 480.f)
+
+/**
+ Runtime check for the current device.
  checks if the current device is an iPhone 5 or iPod Touch 5 Gen, or an Device with 1136 Screen height
  */
 #define DEVICE_IS_IPHONE_5 DEVICE_SCREEN_HAS_LENGTH([UIScreen mainScreen].bounds, 568.f)

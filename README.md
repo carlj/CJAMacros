@@ -1,13 +1,13 @@
-#CJA Macros
+# CJA Macros
 Collection of daily used Macros in my iOS Projects  
   
 [![Build Status](https://travis-ci.org/carlj/CJAMacros.png?branch=master)](https://travis-ci.org/carlj/CJAMacros)
 
-##Installation
+## Installation
 Just drag&drop the ```CJAMarcos.h``` file in your Xcode Project. 
 For global usage you can import the ```CJAMarcos.h``` in your projects ```-Prefix.pch``` file.
 
-##Usage
+## Usage
 First check out the example Project for further examples
 
 ``` objc
@@ -94,5 +94,5 @@ CJAWeakWithNameAndObject(number, Number);
 NSAssert([weakNumber isEqual:number], @"NSNumber objects should be equal");
 ```
 
-##License
+## License
 MIT License
